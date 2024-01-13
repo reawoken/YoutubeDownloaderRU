@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D3632A9-3DE4-4E64-AC3E-94810F2F55D0}"
+	ProjectSection(SolutionItems) = preProject
+		Changelog.md = Changelog.md
+		Directory.Build.props = Directory.Build.props
+		License.txt = License.txt
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeExplode", "YoutubeExplode\YoutubeExplode.csproj", "{2019E360-0E05-4824-9EDE-7723AF45E10C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeExplode.Converter", "YoutubeExplode.Converter\YoutubeExplode.Converter.csproj", "{CF1CA267-32A2-4E91-8207-8FA9C697BC8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2019E360-0E05-4824-9EDE-7723AF45E10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2019E360-0E05-4824-9EDE-7723AF45E10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2019E360-0E05-4824-9EDE-7723AF45E10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2019E360-0E05-4824-9EDE-7723AF45E10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1CA267-32A2-4E91-8207-8FA9C697BC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1CA267-32A2-4E91-8207-8FA9C697BC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1CA267-32A2-4E91-8207-8FA9C697BC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1CA267-32A2-4E91-8207-8FA9C697BC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEA5BDC6-C56D-4AC1-A8C6-2C64A5A75FDD}
+	EndGlobalSection
+EndGlobal

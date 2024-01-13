@@ -1,0 +1,29 @@
+<Project>
+
+  <PropertyGroup>
+    <Version>0.0.0-dev</Version>
+    <Company>Reawoken</Company>
+    <Copyright>Copyright (C) Reawoken</Copyright>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- Disable nullability warnings on frameworks where BCL is not annotated -->
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net461'">
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>$(Company)</Authors>
+    <Description>The Abstraction layer over YouTube's internal API. This library DO WORK in Russia and Belarus. And Russians are welcome here!!</Description>
+    <PackageTags>this package original author is so fuckin asshole and hohol, but it fixed his problems</PackageTags>
+    <PackageProjectUrl>https://kremlin.ru</PackageProjectUrl>
+    <PackageReleaseNotes>https://kremlin.ru</PackageReleaseNotes>
+    <PackageLicenseExpression>FSB</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>

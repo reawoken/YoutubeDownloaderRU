@@ -31,12 +31,9 @@ internal class YoutubeHttpHandler : ClientDelegatingHandler
         // Consent to the use of cookies on YouTube.
         // This is required to access some personalized content, such as mix playlists.
         _cookieContainer.Add(
-            new Cookie(
-                "SOCS",
-                "CAISNQgDEitib3FfaWRlbnRpdHlmcm9udGVuZHVpc2VydmVyXzIwMjMwODI5LjA3X3AxGgJlbiACGgYIgLC_pwY"
-            )
+            new Cookie("SOCS", "CAISEwgDEgk2NzM5OTg2ODUaAmVuIAEaBgiA6p23Bg")
             {
-                Domain = "youtube.com"
+                Domain = "youtube.com",
             }
         );
     }
@@ -47,8 +44,8 @@ internal class YoutubeHttpHandler : ClientDelegatingHandler
 
         var sessionId =
             cookies
-                .FirstOrDefault(
-                    c => string.Equals(c.Name, "__Secure-3PAPISID", StringComparison.Ordinal)
+                .FirstOrDefault(c =>
+                    string.Equals(c.Name, "__Secure-3PAPISID", StringComparison.Ordinal)
                 )
                 ?.Value
             ?? cookies
@@ -151,7 +148,20 @@ internal class YoutubeHttpHandler : ClientDelegatingHandler
         if (response.Headers.TryGetValues("Set-Cookie", out var cookieHeaderValues))
         {
             foreach (var cookieHeaderValue in cookieHeaderValues)
-                _cookieContainer.SetCookies(response.RequestMessage.RequestUri, cookieHeaderValue);
+            {
+                try
+                {
+                    _cookieContainer.SetCookies(
+                        response.RequestMessage.RequestUri,
+                        cookieHeaderValue
+                    );
+                }
+                catch (CookieException)
+                {
+                    // YouTube may send cookies for other domains, ignore them
+                    // https://github.com/Tyrrrz/YoutubeExplode/issues/762
+                }
+            }
         }
 
         return response;

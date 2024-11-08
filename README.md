@@ -1,27 +1,27 @@
-# Денацифицированный YoutubeDownloader (RU)
-**YoutubeDownloaderRU** основан на данном репозитории: https://github.com/Tyrrrz/YoutubeDownloader
+# YoutubeDownloader (RU)
 
 <p align="center">
     <img src="favicon.png" alt="Icon" />
 </p>
 
-# Как скачать
-Последняя версия: v2.38
-<br />Дата: 13.01.2024
-<br />Ссылка в **Releases** : [Нажмите, чтобы скачать](https://github.com/reawoken/YoutubeDownloaderRU/releases/download/v2.38/YoutubeDownloaderRU.v2.38.zip)
+Based on: https://github.com/Tyrrrz/YoutubeDownloader
 
-# Почему я сделал YoutubeDownloaderRU
-Чтобы каждый мог им пользоваться, независимо от идеологии и местопложения. Автор данного приложения закоренелый нацист и русособ, который распространяет недопустимую пропаганду в приложении, вообще не имеющем отношения к политике, войнам и прочему.
+**YoutubeDownloader** is an application that lets you download videos from YouTube.
+You can copy-paste URL of any video, playlist or channel and download it directly to a format of your choice.
+It also supports searching by keywords, which is helpful if you want to quickly look up and download videos.
 
-# Что было изменено
-Основано на версии оригинального репозитория 12.01.2024
-- Полностью удалена проверка национальной принадлежности по локали системы, которая запрещала запуск приложения в России и Белоруссии. Приложение может запустить **кто угодно и где угодно**, будь то житель России, Украины, Белоруссии и любой другой страны. 
-- Больше не опирается на внешние библиотеки автора через NuGet, теперь они часть проекта в репозитории. Также удалена зависимость от омерзительной библиотеки автора с омерзительным названием **deorcify**, которая не делает ничего, кроме дискриминации по национальному признаку.
-- Вычищена подчистую вся политическая повестка (кроме скромной сноски в настройках), удалена вся агрессивная пропаганда и русофобия.
-- Интерфейс полностью переведён на русский
-- Убраны все упоминания авторства безумного пропагандиста, который изначально делал это приложение.
-- Отключены обновления (возможно временно, в будущем смогу добавить свою систему обновлений, не опираясь на изначальный модуль если буду вообще обновлять этот репозиторий)
+**YoutubeDownloader (RU)** features complete country restrictions bypass.
 
-# Как собрать
-Просто скачать и открыть **YoutubeDownloader.sln** в Visual Studio 2022 последней версии с установленным .NET 8.0 и собрать. 
-<br />Собранный проект появится в директории **YoutubeDownloaderRU\bin**.
+> **Note**:
+> **YoutubeDownloader** comes bundled with [FFmpeg](https://ffmpeg.org) which is used for processing videos.
+
+## Features
+
+- Cross-platform graphical user interface
+- Download videos by URL
+- Download videos from playlists or channels
+- Download videos by search query
+- Selectable video quality and format
+- Automatically embed subtitles
+- Automatically inject media tags
+- Log in with a YouTube account to access private content
